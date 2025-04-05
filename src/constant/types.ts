@@ -1,4 +1,9 @@
 import React from "react"
+import { AiFillFacebook } from "react-icons/ai";
+// import { AiFillSkype } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
 
 export const initialState = {
     aboutme: '',
@@ -13,11 +18,6 @@ export const initialState = {
     degree: '',
     freelance: '',
     address:'',
-    portfolio: [{
-        name: '',
-        description: '',
-        url: ''
-    }],
     education: [{
         board: '',
         class: '',
@@ -27,7 +27,7 @@ export const initialState = {
     socialLinks: [{
         name: '',
         url: '',
-        icon:  null
+        icon:  AiFillFacebook || AiOutlineInstagram ||AiFillLinkedin || AiOutlineGithub
     }],
     workExperience: [{
         companyName: '',
@@ -46,7 +46,7 @@ export const initialState = {
     skills: [{
         skillName: ''
     }],
-    lang: [{ skillName: '', value: null }]
+    lang: [{ skillName: '', value: 0 }]
 }
 
 export type ResumeData = {
@@ -62,11 +62,6 @@ export type ResumeData = {
     degree: string
     freelance: string
     address:string
-    portfolio: {
-        name: string
-        description: string
-        url: string
-    }[]
     education: {
         board: string
         class: string
