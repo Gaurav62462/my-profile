@@ -51,8 +51,8 @@ export const initialState = {
 
 export type ResumeData = {
     aboutme: string
-    title: string
-    name: string
+    title?: string
+    name?: string
     dob: string
     role: string
     website: string
@@ -66,7 +66,7 @@ export type ResumeData = {
         board: string
         class: string
         passingDate: string
-        Achievements: string
+        Achievements?: string
     }[],
     socialLinks: {
         name: string
