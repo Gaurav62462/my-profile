@@ -77,7 +77,7 @@ export type ResumeData = {
         companyName: string
         specialization: string
         time: string
-        Achievements: string
+        Achievements?: string
         role :{
             name:string
         }[]
