@@ -2,7 +2,6 @@
 
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HomeMine from "@/components/Home";
 import Projects from "@/components/Projects";
@@ -25,8 +24,6 @@ export default function Home() {
         <Projects />
         <hr className="h-px my-8 border-0 dark:bg-[#e7e2e2]"></hr>
         <Contact />
-        {/* <hr className="h-px my-8 border-0 dark:bg-[#e7e2e2]"></hr>
-        <Footer /> */}
       </div>
     </div>
   );
