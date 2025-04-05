@@ -8,7 +8,7 @@ const HomeMine = () => {
 
     return (
         <section id='home' className="h-full bg-[url('/image/bg-a.png')] bg-cover bg-center bg-no-repeat flex items-center min-h-screen">
-            <div className="w-full h-full bg-[#31303080] flex items-center">
+            <div className="w-full h-full  flex items-center">
                 <p className="text-[64px] text-white font-bold line-clamp-3">
                     {
                         data.name
