@@ -1,5 +1,6 @@
 "use client"
 
+import { UnderLineText } from "@/constant/CommonFunction";
 import { PortfolioContext } from "@/context/PortfolioContext";
 import Image from "next/image";
 import { useContext } from "react";
@@ -9,9 +10,9 @@ const Projects = () => {
 
     return (
         <section id='projects' className="bg-[url('/image/11.jpg')] bg-fixed bg-cover transition-all min-h-screen">
-            <h2 className='bg-white text-[32px] font-bold pb-10'>
-            Projects
-            </h2>
+            <div className='bg-white pb-1'>
+            <UnderLineText text="Projects" />
+            </div>
             <div className="flex flex-wrap gap-4 justify-around p-4">
                 {
                     data?.projects.map((project, index) => {
@@ -22,7 +23,7 @@ const Projects = () => {
                                     height={80}
                                     src={`/image/${project.projectLogo}`}
                                     alt={project.name}
-                                    className="transition-transform duration-300 group-hover:scale-110"
+                                    className="transition-transform duration-300 min-h-[150px] group-hover:scale-110"
                                 />
 
                                 <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">

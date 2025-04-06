@@ -1,6 +1,5 @@
 import React from "react"
 import { AiFillFacebook } from "react-icons/ai";
-// import { AiFillSkype } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
@@ -46,7 +45,8 @@ export const initialState = {
     skills: [{
         skillName: ''
     }],
-    lang: [{ skillName: '', value: 0 }]
+    lang: [{ skillName: '', value: 0 }],
+    languages:['']
 }
 
 export type ResumeData = {
@@ -91,4 +91,10 @@ export type ResumeData = {
         skillName: string
     }[],
     lang: { skillName: string, value: number }[]
+    languages:string[]
+}
+
+export type UnderLineTextProps = {
+    text:string
+    className?:string
 }

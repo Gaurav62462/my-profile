@@ -41,7 +41,7 @@ const Header = ({ }: HeaderProps) => {
                 onClick={toggleSidebar}
                 className="md:hidden fixed top-4 left-4 z-50 bg-[#109DDC] text-white p-2 rounded"
             >
-                <Image width={15} height={15} src={`/${isSidebarOpen ? 'hamburg.svg' : 'close.svg'}`} alt='logo' />
+                <Image width={15} height={15} src={`/${isSidebarOpen ? 'close.svg' : 'hamburg.svg'}`} alt='logo' />
             </button>
             <aside
                 className={`bg-[#040b14] p-8 transition-all duration-300 flex items-center flex-col ease-in-out fixed top-0 left-0 bottom-0 w-[300px] overflow-y-auto z-40

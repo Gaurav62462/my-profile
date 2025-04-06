@@ -1,3 +1,4 @@
+import { UnderLineText } from "@/constant/CommonFunction";
 import { PortfolioContext } from "@/context/PortfolioContext";
 import { useContext } from "react";
 
@@ -7,9 +8,7 @@ const Skills = () => {
     
     return (
         <section id='skill' className="bg-[#f4fafd] mt-5 pl-2 pb-8">
-            <h2 className='text-[32px] font-bold mb-10'>
-                Skills
-            </h2>
+             <UnderLineText text="Skills" />
 
             <div className="flex w-full flex-col md:flex-row">
                 <div className="md:w-[50%] w-full">
@@ -22,7 +21,6 @@ const Skills = () => {
                                 <div key={index} className="mb-5">
                                     <div className="flex justify-between">
                                     <h3 className="uppercase">{skill.skillName}</h3>
-                                    {/* <span>{skill.value}%</span> */}
                                     </div>
                                     <progress className="w-[80%] [&::-webkit-progress-bar]:bg-[#dfe5e8] [&::-webkit-progress-value]:bg-blue_200 h-[10px] mr-3"
                                         id='file' value={skill.value} max={100} />{skill.value}%
