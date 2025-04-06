@@ -1,4 +1,4 @@
-import { PortfolioContext } from "@/app/layout"
+import { PortfolioContext } from "@/context/PortfolioContext";
 import Image from "next/image"
 import { useContext, useState } from "react"
 import { BsFillHouseDoorFill } from "react-icons/bs";

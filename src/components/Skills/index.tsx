@@ -1,4 +1,4 @@
-import { PortfolioContext } from "@/app/layout";
+import { PortfolioContext } from "@/context/PortfolioContext";
 import { useContext } from "react";
 
 const Skills = () => {

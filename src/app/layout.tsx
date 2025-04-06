@@ -1,12 +1,19 @@
 'use client'
+import { PortfolioContext } from "@/context/PortfolioContext";
 import "./globals.css";
-import { createContext } from "react";
-import MetadataLayout from "./metaDataLayout";
-import { initialState, ResumeData } from "@/constant/types";
+// import { createContext } from "react";
+// import MetadataLayout from "./metaDataLayout";
+// import { initialState, ResumeData } from "@/constant/types";
 import resumeData from "@/constant/resumeData";
+import MetadataLayout from "./metaDataLayout";
 
 
-export const PortfolioContext = createContext<ResumeData>(initialState);
+// export const PortfolioContext = createContext<ResumeData>(initialState);
+
+// export const metadata = {
+//   title: 'Portfolio',
+//   description: 'Gaurav Portfolio',
+// };
 
 export default function RootLayout({
   children,
@@ -16,9 +23,9 @@ export default function RootLayout({
 
   return (
     <MetadataLayout>
-        <PortfolioContext.Provider value={resumeData}>
-            {children}
-        </PortfolioContext.Provider>
-    </MetadataLayout>
+      <PortfolioContext.Provider value={resumeData}>
+        {children}
+      </PortfolioContext.Provider>
+      </MetadataLayout>
   );
 }

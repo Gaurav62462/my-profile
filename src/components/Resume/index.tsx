@@ -1,6 +1,6 @@
 "use client"
 
-import { PortfolioContext } from "@/app/layout";
+import { PortfolioContext } from "@/context/PortfolioContext";
 import { useContext } from "react";
 import { FcNext } from "react-icons/fc";
 

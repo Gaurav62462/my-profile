@@ -1,11 +1,12 @@
 // import type { Metadata } from 'next';
 
+import { Metadata } from "next";
 import Head from "next/head";
 
-// export const metadata: Metadata = {
-//   title: 'Portfolio',
-//   description: 'Gaurav Portfolio',
-// };
+export const metadata: Metadata = {
+  title: 'Portfolio',
+  description: 'Gaurav Portfolio',
+};
 
 export default function MetadataLayout({
   children,

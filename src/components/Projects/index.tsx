@@ -1,6 +1,6 @@
 "use client"
 
-import { PortfolioContext } from "@/app/layout";
+import { PortfolioContext } from "@/context/PortfolioContext";
 import Image from "next/image";
 import { useContext } from "react";
 
