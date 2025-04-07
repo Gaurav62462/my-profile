@@ -27,6 +27,7 @@ const Header = ({ }: HeaderProps) => {
 
     const handleScroll = (id: string) => {
         setActive(id);
+        setSidebarOpen(false)
     };
 
     return (
