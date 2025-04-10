@@ -23,8 +23,9 @@ export default function Home() {
 }
 
       // window.onload = getAllLink();
+      if (typeof window !== "undefined") {
       window.onload = () => getAllLink();
-
+      }
       
   return (
     <div className="flex h-screen">
