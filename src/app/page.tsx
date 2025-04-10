@@ -9,6 +9,23 @@ import Resume from "@/components/Resume";
 import Skills from "@/components/Skills";
 
 export default function Home() {
+  function getAllLink(){
+    // const class1 = const sections = document.querySelectorAll('section');
+    const class1 = document.querySelectorAll('section');
+    console.log(class1,'dsljasdada')
+    const array1 = [];
+    for(let i=0;i<class1.length;i++){
+        const str = class1[i].getElementsByTagName('a')[0].href;
+        const res = str.split("?"); 
+        array1.push(res[0]);
+    }
+    console.log(array1);
+}
+
+      // window.onload = getAllLink();
+      window.onload = () => getAllLink();
+
+      
   return (
     <div className="flex h-screen">
       <Header />

@@ -8,7 +8,7 @@ const HomeMine = () => {
   const data = useContext(PortfolioContext);
 
   return (
-    <section className="relative w-full md:min-h-screen min-h-[50vh] flex overflow-hidden">
+    <section className="relative w-full md:min-h-screen min-h-[70vh] sm:min-h-[100vh] flex overflow-hidden">
       <div className="absolute inset-0 bg-black">
         <Image
           width={700}
