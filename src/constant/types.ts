@@ -46,7 +46,8 @@ export const initialState = {
         skillName: ''
     }],
     lang: [{ skillName: '', value: 0 }],
-    languages:['']
+    languages:[''],
+    infoDescription:''
 }
 
 export type ResumeData = {
@@ -92,6 +93,7 @@ export type ResumeData = {
     }[],
     lang: { skillName: string, value: number }[]
     languages:string[]
+    infoDescription:string
 }
 
 export type UnderLineTextProps = {

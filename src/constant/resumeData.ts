@@ -21,7 +21,7 @@ const resumeData = {
     'languages':['English','Hindi','Punjabi'],
     'aboutme': "I'm a freelance Front-End Developer who specializes in building beautiful, functional, and responsive user interfaces. I combine modern design with clean, scalable code to deliver great digital experiences across all devices. I work with technologies like React, Next.js, TypeScript — not just to make things look good, but to ensure everything works smoothly too. I focus on both design and functionality. Outside of work, I'm passionate about traveling, getting lost in music, and finding peace in Sufi poetry and vibes.",
     // 'infoWindow': 'SunFocus Solutions',
-    // 'infoWindow1': '1st floor, Plot No: C-127, Phase-8, Industrial Area, Sahibzada Ajit Singh Nagar, Punjab 160072',
+    'infoDescription': '1st floor, Plot No: C-127, Phase-8, Industrial Area, Sahibzada Ajit Singh Nagar, Punjab 160072',
     // 'roleDescription': 'I like to learn and create applications in various parts of software development and like to learn about new technologies, write technical articles or simply play games in my free time.',
     'socialLinks': [
         {

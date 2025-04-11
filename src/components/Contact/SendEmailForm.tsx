@@ -32,7 +32,7 @@ export default function SendEmailForm() {
   };
 
   return (
-    <div className="shadow-[-8px_0px_32px_-2px_rgba(0,_0,_0,_0.1)] flex flex-col items-center justify-center p-8">
+    <div className="shadow-[-8px_0px_32px_-2px_rgba(0,_0,_0,_0.1)] md:w-[50%] w-full flex flex-col items-center justify-center p-5">
       <div className=" w-full">
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
