@@ -1,6 +1,5 @@
 
 import { AiFillFacebook } from "react-icons/ai";
-// import { AiFillSkype } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
@@ -10,7 +9,7 @@ const resumeData = {
     'name': 'Gaurav kumar',
     'role': 'Frontend Developer',
     "dob": '17-March-1997',
-    'website': 'https://gaurav-dev-mu.vercel.app',
+    'website': 'https://gaurav-works.vercel.app',
     'phone': 'XXXXXX9648',
     'city': 'Chandigarh',
     'email': 'gaurav62462@gmail.com',
@@ -36,7 +35,7 @@ const resumeData = {
         },
         {
             'name': 'Instagram',
-            'url': 'https://www.linkedin.com/in/dilip-safi-438322a3/',
+            'url': 'https://www.instagram.com/gauravkumar5467/',
             'icon': AiOutlineInstagram
         },
         {
@@ -69,7 +68,7 @@ const resumeData = {
             'Achievements': 'Some Achievements',
             'role': [
                 {name:'Led the development of responsive user interface components using React and TypeScript, enhancing user experience.'},
-                   { name:'Collaborated with cross-functional teams to strategize and implement innovative UI features and applications.'}
+                { name:'Collaborated with cross-functional teams to strategize and implement innovative UI features and applications.'}
             ]
         },
         {
