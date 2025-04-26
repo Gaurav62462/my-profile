@@ -7,18 +7,18 @@ import HomeMine from "@/components/Home";
 import Projects from "@/components/Projects";
 import Resume from "@/components/Resume";
 import Skills from "@/components/Skills";
-import { useEffect } from "react";
+// import { useEffect/ } from "react";
 
 export default function Home() {
   // const [referrer, setReferrer] = useState();
 
-  useEffect(() => {
-    const ref = typeof document !== 'undefined' ? document.referrer : '' // Get the full referrer URL
-    console.log(ref,'referrerreferrer')
-    const split = ref ? ref.split("/") : []
-    localStorage.setItem("myCat", JSON.stringify(split));
+  // useEffect(() => {
+  //   // const ref = typeof document !== 'undefined' ? document.referrer : '' // Get the full referrer URL
+  //   // console.log(ref,'referrerreferrer')
+  //   // const split = ref ? ref.split("/") : []
+  //   localStorage.setItem("myCat", JSON.stringify(document.referrer));
 
-  }, []);
+  // }, []);
 
 
 
