@@ -16,6 +16,7 @@ export default function Home() {
     const fullReferrer = typeof document !== 'undefined' && window.location.href ;
     const ref = typeof document !== 'undefined' && document.referrer ; // Get the full referrer URL
     console.log(ref,'referrerreferrer',fullReferrer)
+    console.log(document,'document')
     if (fullReferrer) {
       setReferrer(fullReferrer);
     }
