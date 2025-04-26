@@ -13,8 +13,9 @@ export default function Home() {
   const [referrer, setReferrer] = useState<string | null>(null);
 
   useEffect(() => {
-    const fullReferrer = typeof document !== 'undefined' && document.referrer; // Get the full referrer URL
-    console.log(referrer,'referrerreferrer')
+    const fullReferrer = typeof document !== 'undefined' && window.location.href ;
+    const ref = typeof document !== 'undefined' && document.referrer ; // Get the full referrer URL
+    console.log(ref,'referrerreferrer',fullReferrer)
     if (fullReferrer) {
       setReferrer(fullReferrer);
     }
