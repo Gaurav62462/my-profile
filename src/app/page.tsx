@@ -10,17 +10,15 @@ import Skills from "@/components/Skills";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [referrer, setReferrer] = useState<string | null>(null);
+  // const [referrer, setReferrer] = useState();
 
   useEffect(() => {
-    const fullReferrer = typeof document !== 'undefined' && window.location.href ;
-    const ref = typeof document !== 'undefined' && document.referrer || '' ; // Get the full referrer URL
-    console.log(ref,'referrerreferrer',fullReferrer)
-    console.log(ref?.split("/")[3],'document')
-    if (fullReferrer) {
-      setReferrer(fullReferrer);
-    }
-  }, [referrer]);
+    const ref = typeof document !== 'undefined' ? document.referrer : '' // Get the full referrer URL
+    console.log(ref,'referrerreferrer')
+    const split = ref ? ref.split("/") : []
+    localStorage.setItem("myCat", JSON.stringify(split));
+
+  }, []);
 
 
 
