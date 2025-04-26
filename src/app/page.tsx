@@ -7,7 +7,7 @@ import HomeMine from "@/components/Home";
 import Projects from "@/components/Projects";
 import Resume from "@/components/Resume";
 import Skills from "@/components/Skills";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
   // const [referrer, setReferrer] = useState();
