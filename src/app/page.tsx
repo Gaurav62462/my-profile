@@ -11,13 +11,38 @@ import { useEffect } from "react";
 
 export default function Home() {
 
+  // useEffect(() => {
+  //   const ref = typeof document !== 'undefined' ? document.referrer : ''
+  //   console.log(ref)
+  //   if(ref){
+  //     console.log('Inside')
+  //      checkVisiter(ref)
+  //   }
+  // }, []);
   useEffect(() => {
-    const ref = typeof document !== 'undefined' ? document.referrer : ''
-    console.log(ref)
-    if(ref){
-      console.log('Inside')
-       checkVisiter(ref)
+    async function init() {
+      try {
+        // Step 1: Check if MongoDB is connected
+        const dbRes = await fetch('/api/db-status');
+        const dbStatus = await dbRes.json();
+        console.log(dbStatus,'dbResdbRes')
+  
+        if (dbStatus.connected) {
+          // Step 2: Call your API now
+          const ref = document.referrer;
+          console.log(ref)
+          if (ref) {
+            await checkVisiter(ref);
+          }
+        } else {
+          console.warn('MongoDB not connected.');
+        }
+      } catch (err) {
+        console.error('Error during init:', err);
+      }
     }
+  
+    init();
   }, []);
 
   async function checkVisiter(visitUrl: string) {
