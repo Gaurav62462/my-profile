@@ -14,7 +14,10 @@ export default function Home() {
   useEffect(() => {
     const ref = typeof document !== 'undefined' ? document.referrer : ''
     console.log(ref)
-    if(ref) checkVisiter(ref)
+    if(ref){
+      console.log('Inside')
+       checkVisiter(ref)
+    }
   }, []);
 
   async function checkVisiter(visitUrl: string) {
