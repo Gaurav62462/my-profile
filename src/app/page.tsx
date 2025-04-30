@@ -23,17 +23,17 @@ export default function Home() {
     async function init() {
       try {
         // Step 1: Check if MongoDB is connected
-        const dbRes = await fetch('/api/db-status');
-        const dbStatus = await dbRes.json();
-        console.log(dbStatus,'dbResdbRes')
+        // const dbRes = await fetch('/api/db-status');
+        // const dbStatus = await dbRes.json();
+        // console.log(dbStatus,'dbResdbRes')
   
-        if (dbStatus.connected) {
+        // if (dbStatus.connected) {
           // Step 2: Call your API now
           const ref = document.referrer;
           console.log(ref)
           if (ref) {
             await checkVisiter(ref);
-          }
+          // }
         } else {
           console.warn('MongoDB not connected.');
         }
