@@ -4,14 +4,22 @@ import { UnderLineText } from "@/constant/CommonFunction";
 import { PortfolioContext } from "@/context/PortfolioContext";
 import Image from "next/image";
 import { useContext } from "react";
+// import PayPalButton from "./PaypalButton";
 
 const Projects = () => {
     const data = useContext(PortfolioContext);
 
+    // const handlePaymentStatus = (status: 'success' | 'cancelled' | 'failed', data?: unknown) => {
+    //     console.log('Status:', status, data);
+    //     // You can call your backend API here to save the status
+    //   };
     return (
         <section id='projects' className="bg-[url('/image/11.jpg')] bg-fixed bg-cover transition-all min-h-screen">
             <div className='bg-white pb-1'>
             <UnderLineText text="Projects" />
+            {/* <button style={{background:'red', height:'50px', width:'100px'}}>Paypal pay</button>
+            <PayPalButton amount="10.00" onPaymentStatus={handlePaymentStatus} /> */}
+
             </div>
             <div className="flex flex-wrap gap-4 justify-around p-4">
                 {

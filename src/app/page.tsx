@@ -7,35 +7,49 @@ import HomeMine from "@/components/Home";
 import Projects from "@/components/Projects";
 import Resume from "@/components/Resume";
 import Skills from "@/components/Skills";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
-  // const [referrer, setReferrer] = useState();
 
-  // useEffect(() => {
-  //   const ref = typeof document !== 'undefined' ? document.referrer : '' // Get the full referrer URL
-  //   console.log(ref,'referrerreferrer')
-  //   const split = ref ? ref.split("/") : []
-  //   localStorage.setItem("myCat", JSON.stringify(split));
+  useEffect(() => {
+    const ref = typeof document !== 'undefined' ? document.referrer : ''
+    console.log(ref)
+    if(ref) checkVisiter(ref)
+  }, []);
 
-  // }, []);
+  async function checkVisiter(visitUrl: string) {
+    const url = "api/visit-user";
 
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({ visiterUrl: visitUrl }),
+      });
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+      const json = await response.json();
+      return json
+    } catch (error) {
+      console.error(error);
+    }
 
+  }
 
-    //   const callApi = async () => {
-    //   try {
-    //     const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/users`);
-    // const data = await response.json();
-    // console.log('data data:', data);
-    // return data;
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    //   }
+  //   const callApi = async () => {
+  //   try {
+  //     const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/users`);
+  // const data = await response.json();
+  // console.log('data data:', data);
+  // return data;
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  //   }
 
-    //   useEffect(() => {
-    //       callApi();
-    //   }, []);
+  //   useEffect(() => {
+  //       callApi();
+  //   }, []);
 
 
   return (
