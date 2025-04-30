@@ -16,8 +16,8 @@ export async function connectToDB() {
   if (!cached.promise) {
     cached.promise = mongoose.connect(MONGODB_URI, {
       dbName: 'my_portfolio',
-      // serverSelectionTimeoutMS: 3000,
-      // socketTimeoutMS: 4500,
+      serverSelectionTimeoutMS: 3000,
+      socketTimeoutMS: 4500,
     }).then((mongoose) => mongoose);
   }
 
