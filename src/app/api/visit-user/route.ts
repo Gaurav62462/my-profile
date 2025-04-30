@@ -3,6 +3,9 @@ import { visiterFrom } from "@/model/visiterFrom";
 import mongoose from "mongoose";
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 5; // 5 seconds
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
 
     try {
