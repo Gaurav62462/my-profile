@@ -6,9 +6,6 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
 
     try {
-        // if (mongoose.connection.readyState !== 1) {
-        //     await connectToDB();
-        //   }
         const { visiterUrl } = await request.json()
         // console.time("MongoDB connect");
         await connectToDB();
