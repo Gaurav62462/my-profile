@@ -22,7 +22,7 @@ export default function Home() {
 
   async function checkVisiter(visitUrl: string) {
     const controller = new AbortController();
-    setTimeout(() => controller.abort(), 8000);
+    setTimeout(() => controller.abort(), 10000);
     const url = "api/visit-user";
 
     try {
