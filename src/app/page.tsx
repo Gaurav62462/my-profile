@@ -20,7 +20,6 @@ export default function Home() {
   //   }
   // }, []);
   useEffect(() => {
-    async function init() {
       try {
         // Step 1: Check if MongoDB is connected
         // const dbRes = await fetch('/api/db-status');
@@ -32,7 +31,9 @@ export default function Home() {
           const ref = document.referrer;
           console.log(ref)
           if (ref) {
-            await checkVisiter(ref);
+            setTimeout(() => {
+             checkVisiter(ref);
+          }, 500);
           // }
         } else {
           console.warn('MongoDB not connected.');
@@ -40,9 +41,7 @@ export default function Home() {
       } catch (err) {
         console.error('Error during init:', err);
       }
-    }
   
-    init();
   }, []);
 
   async function checkVisiter(visitUrl: string) {
