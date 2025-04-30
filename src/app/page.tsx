@@ -21,12 +21,18 @@ export default function Home() {
   }, []);
 
   async function checkVisiter(visitUrl: string) {
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), 8000);
     const url = "api/visit-user";
 
     try {
       const response = await fetch(url, {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ visiterUrl: visitUrl }),
+        signal: controller.signal,
       });
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);

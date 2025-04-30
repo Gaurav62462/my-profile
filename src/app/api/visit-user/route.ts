@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
         const { visiterUrl } = await request.json()
         await connectToDB();
         await visiterFrom.create({ visitUrl: visiterUrl })
-        await mongoose.connection.close()
+        // await mongoose.connection.close()
         return NextResponse.json({ message: "Visiter sent successfully" }, { status: 201 })
     } catch (err) {
         console.error(err);
