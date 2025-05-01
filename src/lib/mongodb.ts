@@ -18,7 +18,10 @@ export async function connectToDB() {
       dbName: 'my_portfolio',
       serverSelectionTimeoutMS: 3000,
       socketTimeoutMS: 4500,
-    }).then((mongoose) => mongoose);
+    }).then((mongoose) =>{
+      console.log('✅ MongoDB connected successfully');
+     return mongoose
+    });
   }
 
   cached.conn = await cached.promise;

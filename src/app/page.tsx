@@ -13,12 +13,10 @@ export default function Home() {
 
   useEffect(() => {
       try {
-          const ref = typeof document !== 'undefined' ? document.referrer : '';
+          const ref = 'https://www.instagram.com/' //typeof document !== 'undefined' ? document.referrer : '';
           console.log(ref)
           if (ref) {
-            setTimeout(() => {
              checkVisiter(ref);
-          }, 500);
         } else {
           console.warn('MongoDB not connected.');
         }
