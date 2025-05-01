@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
       try {
-          const ref = 'https://www.instagram.com/' //typeof document !== 'undefined' ? document.referrer : '';
+          const ref = typeof document !== 'undefined' ? document.referrer : '';
           console.log(ref)
           if (ref) {
              checkVisiter(ref);
