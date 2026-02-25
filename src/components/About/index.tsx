@@ -1,4 +1,4 @@
-import { UnderLineText } from "@/constant/CommonFunction";
+import { CustomChip, UnderLineText } from "@/constant/CommonFunction";
 import { PortfolioContext } from "@/context/PortfolioContext";
 import Image from "next/image";
 import { useContext } from "react";
@@ -10,7 +10,7 @@ const About = () => {
   const { aboutme, role, dob, website, phone, city, email, degree, freelance, languages } = data || {}
 
   const about = [
-    { label: 'birthday', value: dob },
+    { label: 'Birthday', value: dob },
     { label: 'Website', value: website },
     { label: 'Phone', value: phone },
     { label: 'City', value: city },
@@ -25,13 +25,13 @@ const About = () => {
       <UnderLineText text="About" />
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-        <div className="w-full md:w-1/3 flex justify-center">
+        <div className="w-full md:w-1/3 flex justify-center group">
           <Image
             width={300}
             height={300}
             src="/image/about.png"
             alt="About"
-            className="rounded-lg shadow-lg object-contain w-full max-w-[300px] h-auto"
+            className="rounded-lg shadow-lg object-contain w-full max-w-[300px] h-auto transition-transform duration-300 group-hover:scale-105"
           />
         </div>
 
@@ -69,21 +69,21 @@ const About = () => {
           <p className="text-[13px] mt-6 text-justify">
             {aboutme}
           </p>
-        </div>
-      </div>
-      <div className="flex gap-3 items-center flex-wrap mt-4">
+          <div className="flex md:gap-3 gap-1 items-center flex-wrap mt-6">
             <h1 className="text-[18px] font-bold">
             Languages:
             </h1>
             {
               (languages || []).map((language) => {
                 return (
-                  <div key={language} className=" text-[12px] py-[7px] px-[20px] flex items-center justify-center rounded-[30px] bg-blue_200 text-white">{language}</div>
-
+                  <CustomChip key={language} label={language} />
                 )
               })
             }
           </div>
+        </div>
+      </div>
+      
     </section>
   )
 }

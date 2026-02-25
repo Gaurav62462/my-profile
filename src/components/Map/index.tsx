@@ -244,8 +244,8 @@ const defaultMapContainerStyle = {
 };
 
 const defaultMapCenter = {
-    lat: 35.8799866,
-    lng: 76.5048004
+    lat: 30.724897,
+    lng: 76.647852
 }
 
 const defaultMapZoom = 18
@@ -253,7 +253,7 @@ const libraries:Libraries = ['places', 'drawing', 'geometry'];
 
 const Map = () => {
     const data = useContext(PortfolioContext);
-    const center = {lat:30.713324,lng:76.730275}
+    const center = {lat:30.724897,lng:76.647852}
     
     const { isLoaded } = useJsApiLoader({
         googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API || '',

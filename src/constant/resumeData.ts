@@ -18,7 +18,7 @@ const resumeData = {
     // 'skypeid': 'gaurav@ajivainfotech.com',
     'title':'Hi! This is Gaurav.',
     'languages':['English','Hindi','Punjabi'],
-    'aboutme': "I'm a freelance Front-End Developer who specializes in building beautiful, functional, and responsive user interfaces. I combine modern design with clean, scalable code to deliver great digital experiences across all devices. I work with technologies like React, Next.js, TypeScript — not just to make things look good, but to ensure everything works smoothly too. I focus on both design and functionality. Outside of work, I'm passionate about traveling, getting lost in music, and finding peace in Sufi poetry and vibes.",
+    'aboutme': "I'm a Front-End Developer who specializes in building beautiful, functional, and responsive user interfaces. I combine modern design with clean, scalable code to deliver great digital experiences across all devices. I work with technologies like React, Next.js, TypeScript — not just to make things look good, but to ensure everything works smoothly too. I focus on both design and functionality. Outside of work, I'm passionate about traveling, getting lost in music, and finding peace in Sufi poetry and vibes.",
     // 'infoWindow': 'SunFocus Solutions',
     'infoDescription': '1st floor, Plot No: C-127, Phase-8, Industrial Area, Sahibzada Ajit Singh Nagar, Punjab 160072',
     // 'roleDescription': 'I like to learn and create applications in various parts of software development and like to learn about new technologies, write technical articles or simply play games in my free time.',
@@ -44,7 +44,7 @@ const resumeData = {
             'icon':  AiOutlineGithub
         },
     ],
-    'address': '3rd Floor, Olivia 13, SBP City of Dreams, Sector 116, Mohali, Punjab',
+    'address': '11A Ground Floor, Golden Estate, Sector 115, Mohali, Punjab',
     'education': [
         {
             'board': 'Punjab school education board',
@@ -99,6 +99,15 @@ const resumeData = {
                 {name:'Demonstrated flexibility and adaptability to client requirements, creating customized solutions in a freelance capacity.'},
             ]
         },
+        {
+            'companyName': 'Sourcemash Technology',
+            'specialization': 'Software Developer',
+            'time': 'June 2025 - Present',
+            'Achievements': 'Some Achievements',
+            'role': [
+                {name:'Built custom web applications leveraging Next.js, focusing on scalability and responsiveness.'},
+            ]
+        },
     ],
     'projects': [
         {
@@ -135,6 +144,16 @@ const resumeData = {
             'name': 'VLS',
             'description': 'VLS is a school App , where princple can create teacher, students, classes, subjects etc. Manage all the things as in school.',
             'projectLogo':'vls.png'
+        },
+        {
+            'name': 'Fruit of The Loom',
+            'description': 'E-commerce site built with Nextjs and integration with Frontastic where we can create the dynamic pages.',
+            'projectLogo':'fotl.svg'
+        },
+        {
+            'name': 'Russell Athletic',
+            'description': 'E-commerce site built with Nextjs and integration with Frontastic where we can create the dynamic pages.',
+            'projectLogo':'russell.svg'
         }
     ],
  'skills' : [

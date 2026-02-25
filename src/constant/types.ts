@@ -100,3 +100,7 @@ export type UnderLineTextProps = {
     text:string
     className?:string
 }
+
+export type ChipProps = {
+    label:string
+}

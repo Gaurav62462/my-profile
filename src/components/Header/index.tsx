@@ -45,7 +45,7 @@ const Header = ({ }: HeaderProps) => {
                 <Image width={15} height={15} src={`/${isSidebarOpen ? 'close.svg' : 'hamburg.svg'}`} alt='logo' />
             </button>
             <aside
-                className={`bg-[#040b14] p-8 transition-all duration-300 flex items-center flex-col ease-in-out fixed top-0 left-0 bottom-0 w-[300px] overflow-y-auto z-40
+                className={`bg-[#040b14] p-8 pt-0 transition-all duration-300 flex items-center flex-col ease-in-out fixed top-0 left-0 bottom-0 w-[300px] overflow-y-auto z-40
             ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
             md:translate-x-0 md:static md:flex`}
             // className={`bg-[#040b14] p-8 transition-all flex items-center flex-col ease-in-out 0.3s fixed top-0 left-0 bottom-0 w-[300px] overflow-y-auto`}

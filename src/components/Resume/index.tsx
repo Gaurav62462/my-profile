@@ -12,7 +12,7 @@ const Resume = () => {
     return (
         <section id='resume' className="pl-2">
              <UnderLineText text="Resume" />
-            <div className="flex flex-1 mt-10 flex justify-around flex-wrap md:flex-nowrap md:justify-start">
+            <div className="flex flex-1 mt-10 flex flex-col justify-around flex-wrap md:flex-nowrap md:justify-start">
                 <div className=" flex flex-col justify-start w-full">
                     <h2 className='text-[24px] font-[600] '>
                         Education
@@ -34,7 +34,7 @@ const Resume = () => {
                     </div>
                 </div>
                 <div className="">
-                    <h2 className='text-[24px] font-[600] mb-5 md:mt-0 mt-6'>
+                    <h2 className='text-[24px] font-[600] mb-5 mt-5'>
                         Professional Experience
                     </h2>
                     <div className="ml-3">

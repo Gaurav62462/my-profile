@@ -1,4 +1,4 @@
-import { UnderLineTextProps } from "./types"
+import { ChipProps, UnderLineTextProps } from "./types"
 
 export const UnderLineText = ({text,className}:UnderLineTextProps) =>{
     return(
@@ -6,4 +6,16 @@ export const UnderLineText = ({text,className}:UnderLineTextProps) =>{
         {text}
       </h2>
     )
+}
+
+export const Divider = () =>{
+  return(
+      <hr className="h-px my-8 border-0 bg-[#e7e2e2]"></hr>
+  )
+}
+
+export const CustomChip = ({label}:ChipProps) =>{
+  return(
+  <div className="cursor-pointer text-[12px] py-[7px] md:px-[20px] px-[10px] flex items-center justify-center rounded-[30px] bg-blue_200 text-white">{label}</div>
+  )
 }

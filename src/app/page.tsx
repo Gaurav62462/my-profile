@@ -2,28 +2,34 @@
 
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+// import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+// import HobbiesSection from "@/components/HobbiesSection";
 import HomeMine from "@/components/Home";
 import Projects from "@/components/Projects";
 import Resume from "@/components/Resume";
 import Skills from "@/components/Skills";
+// import TestComponent from "@/components/TestComponent";
+import { Divider } from "@/constant/CommonFunction";
 import { useEffect } from "react";
 
 export default function Home() {
 
   useEffect(() => {
-      try {
-          const ref = typeof document !== 'undefined' ? document.referrer : '';
-          console.log(ref)
-          if (ref) {
-             checkVisiter(ref);
-        } else {
-          console.warn('MongoDB not connected.');
-        }
-      } catch (err) {
-        console.error('Error during init:', err);
+    try {
+      const ref = typeof document !== 'undefined' ? document.referrer : '';
+      // console.log(ref)
+      if (ref) {
+        setTimeout(() => {
+          checkVisiter(ref);
+        }, 2000)
+      } else {
+        console.warn('MongoDB not connected.');
       }
-  
+    } catch (err) {
+      console.error('Error during init:', err);
+    }
+
   }, []);
 
   async function checkVisiter(visitUrl: string) {
@@ -72,16 +78,20 @@ export default function Home() {
       <Header />
       <div className="flex-1 overflow-y-auto">
         <HomeMine />
-        <hr className="h-px my-8 border-0 bg-[#e7e2e2]"></hr>
+        <Divider />
         <About />
-        <hr className="h-px my-8 border-0 bg-[#e7e2e2]"></hr>
+        <Divider />
         <Skills />
-        <hr className="h-px my-8 border-0 bg-[#e7e2e2]"></hr>
+        <Divider />
         <Resume />
-        <hr className="h-px my-8 border-0 bg-[#e7e2e2]"></hr>
+        <Divider />
         <Projects />
-        <hr className="h-px my-8 border-0 bg-[#e7e2e2]"></hr>
+        <Divider />
         <Contact />
+        {/* <HobbiesSection /> */}
+        {/* <Divider /> */}
+        {/* <Footer /> */}
+        {/* <TestComponent /> */}
         <div className="pt-10" />
       </div>
     </div>
