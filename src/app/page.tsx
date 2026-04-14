@@ -22,7 +22,9 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      const ref = typeof document !== 'undefined' ? document.referrer : '';
+      // const ref = typeof document !== 'undefined' ? document.referrer : '';
+        const visitUrl = document.referrer;
+        const ref = visitUrl || window.location.href;
       if (ref) {
         setTimeout(() => {
           checkVisiter(ref);
