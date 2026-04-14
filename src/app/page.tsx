@@ -34,7 +34,7 @@ export default function Home() {
       console.error('Error during init:', err);
     }
 
-  }, []);
+  }, [checkVisiter]);
 
   //   const callApi = async () => {
   //   try {
