@@ -6,7 +6,7 @@ export const useCheckVisitor = () => {
   async function checkVisiter(visitUrl: string) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
-    const url = "api/visit-user";
+    const url = "/api/visit-user";
 
     try {
       const res = await fetch(ipUrl);
