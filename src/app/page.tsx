@@ -1,6 +1,7 @@
 "use client"
 
 import About from "@/components/About";
+import WavePopup from "@/components/CheckVisiter";
 import Contact from "@/components/Contact";
 // import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -11,9 +12,12 @@ import Resume from "@/components/Resume";
 import Skills from "@/components/Skills";
 // import TestComponent from "@/components/TestComponent";
 import { Divider } from "@/constant/CommonFunction";
+import { useCheckVisitor } from "@/hooks/useCheckVisitor";
 import { useEffect } from "react";
 
 export default function Home() {
+  const {checkVisiter} = useCheckVisitor()
+
 
   useEffect(() => {
     try {
@@ -31,31 +35,6 @@ export default function Home() {
     }
 
   }, []);
-
-  async function checkVisiter(visitUrl: string) {
-    const controller = new AbortController();
-    setTimeout(() => controller.abort(), 8000);
-    const url = "api/visit-user";
-
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ visiterUrl: visitUrl }),
-        signal: controller.signal,
-      });
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
-      }
-      const json = await response.json();
-      return json
-    } catch (error) {
-      console.error(error);
-    }
-
-  }
 
   //   const callApi = async () => {
   //   try {
@@ -78,6 +57,7 @@ export default function Home() {
       <Header />
       <div className="flex-1 overflow-y-auto">
         <HomeMine />
+        <WavePopup />
         <Divider />
         <About />
         <Divider />

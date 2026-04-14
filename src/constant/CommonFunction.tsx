@@ -16,6 +16,6 @@ export const Divider = () =>{
 
 export const CustomChip = ({label}:ChipProps) =>{
   return(
-  <div className="cursor-pointer text-[12px] py-[7px] md:px-[20px] px-[10px] flex items-center justify-center rounded-[30px] bg-blue_200 text-white">{label}</div>
+  <div className="cursor-pointer text-[12px] py-[7px] md:px-[20px] px-[10px] flex items-center justify-center rounded-[30px] bg-blue_200 text-white transition-all duration-300 hover:scale-110">{label}</div>
   )
 }

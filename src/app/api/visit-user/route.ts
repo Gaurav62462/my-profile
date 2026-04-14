@@ -6,12 +6,13 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
 
     try {
-        const { visiterUrl } = await request.json()
+        const { visiterUrl,locRes } = await request.json()
        
         await connectToDB();
         await visiterFrom.create({
             visiterUrl,
             visitedAt: new Date(), 
+            locRes
           })
         // await mongoose.connection.close()
         return NextResponse.json({ message: "Visiter sent successfully" }, { status: 201 })

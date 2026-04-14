@@ -172,6 +172,8 @@ const resumeData = {
         { 'skillName': 'Eslint' },
         { 'skillName': 'Redux-Saga' },
         { 'skillName': 'HTML' },
+        { 'skillName': 'Jest' },
+        { 'skillName': 'Azure' },
     ],
     'lang' : [
             { 'skillName': 'JavaScript', 'value': 80 },

@@ -104,3 +104,17 @@ export type UnderLineTextProps = {
 export type ChipProps = {
     label:string
 }
+
+export type IpData = {
+  ip?: string;
+  city?: string;
+  region?: string;
+  country_name?: string;
+  org?: string;
+  network?: string;
+  latitude?: number;
+  longitude?: number;
+  timezone?: string;
+  utc_offset?: string;
+  asn?: string;
+};
