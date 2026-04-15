@@ -1,7 +1,6 @@
 import { IpData } from "@/constant/types";
 
 export const useCheckVisitor = () => {
-  const ipUrl = process.env.NEXT_PUBLIC_GET_IP_DETAILS || '';
 
   async function checkVisiter(visitUrl: string) {
     const controller = new AbortController();
@@ -9,7 +8,7 @@ export const useCheckVisitor = () => {
     const url = "/api/visit-user";
 
     try {
-      const res = await fetch(ipUrl);
+      const res = await fetch('https://ipapi.co/json/');
       const data: IpData = await res.json();
 
       const locRes = {
