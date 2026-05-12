@@ -16,25 +16,24 @@ import { useCheckVisitor } from "@/hooks/useCheckVisitor";
 import { useEffect } from "react";
 
 export default function Home() {
-  const {checkVisiter} = useCheckVisitor()
+  const { checkVisiter } = useCheckVisitor()
 
   useEffect(() => {
     try {
       const ref = typeof document !== 'undefined' ? document.referrer : '';
-      if (ref) {
-        setTimeout(() => {
-          checkVisiter(ref);
-        }, 2000)
-      } else {
-        console.warn('MongoDB not connected.');
-      }
+      const visitSource = ref || "direct";
+
+      setTimeout(() => {
+        checkVisiter(visitSource);
+      }, 2000)
+
     } catch (err) {
       console.error('Error during init:', err);
     }
 
   }, []);
 
-  
+
   //   const callApi = async () => {
   //   try {
   //     const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/users`);

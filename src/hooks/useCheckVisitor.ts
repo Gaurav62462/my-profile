@@ -10,19 +10,20 @@ export const useCheckVisitor = () => {
     try {
       const res = await fetch('https://ipapi.co/json/');
       const data: IpData = await res.json();
+      const { ip, city, region, country_name, org, network, latitude, longitude, timezone, utc_offset, asn } = data || {}
 
       const locRes = {
-        ip: data.ip,
-        city: data.city,
-        region: data.region,
-        country_name: data.country_name,
-        org: data.org,
-        network: data.network,
-        latitude: data.latitude,
-        longitude: data.longitude,
-        timezone: data.timezone,
-        utc_offset: data.utc_offset,
-        asn: data.asn,
+        ip: ip,
+        city: city,
+        region: region,
+        country_name: country_name,
+        org: org,
+        network: network,
+        latitude: latitude,
+        longitude: longitude,
+        timezone: timezone,
+        utc_offset: utc_offset,
+        asn: asn,
       };
 
       const response = await fetch(url, {
